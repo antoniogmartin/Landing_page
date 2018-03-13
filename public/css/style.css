@@ -1,0 +1,117 @@
+body{/*background:#fff;*/width:100%}
+ul.err-area li{color:red}
+.data-table{float:left;display:inline-block}
+.data-table table{border-collapse:collapse;border:1px solid #ddd;}
+.page-data{float:left;display:inline-block;}
+
+/*settings css*/
+
+
+
+.chart-container {
+  width: 50%;
+  margin: 0 auto;
+  position: relative; height:40vh;
+}
+
+.settings-notification{
+color: red;
+font-weight: bold;
+}
+
+.return-button{
+  margin-left: 10%;
+  margin-top: -12%;
+}
+
+.btn-default {
+
+ 
+ 
+ background: none;
+ border: 0;
+  border-color: 0;
+}
+
+  .head_chart {
+            background-color:#ddd;
+         }
+    
+
+
+.mdl-layout-title #metrepp-logo
+
+{
+  text-align: right;
+}
+
+
+#ticketTable {
+  width: 100%;
+  margin: 0 auto;
+  position: relative; height:40vh;
+}
+
+#j_metrepp {
+    /* IE8 and below */
+    background: rgb(200, 54, 54);
+    /* all other browsers */
+    background: rgba(220, 60, 70, 0.4);
+}
+#login{
+   background-color: rgba(245, 245, 245, 0.4);
+}
+#signup{
+   background-color: rgba(245, 245, 245, 0.4);
+}
+.demo-ribbon {
+  width: 100%;
+  height: 40vh;
+  background-color: #C5C4C2;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.mdl-data-table{
+  width: 100%;
+  
+}
+.demo-main {
+  margin-top: -35vh;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.demo-header .mdl-layout__header-row {
+  padding-left: 40px;
+}
+
+.demo-container {
+  max-width: 1600px;
+  width: calc(100% - 16px);
+  margin: 0 auto;
+}
+
+.demo-content {
+  border-radius: 2px;
+  padding: 80px 56px;
+  margin-bottom: 80px;
+}
+
+.demo-layout.is-small-screen .demo-content {
+  padding: 40px 28px;
+}
+
+.demo-content h3 {
+  margin-top: 48px;
+}
+
+.demo-footer {
+  padding-left: 40px;
+}
+
+.demo-footer .mdl-mini-footer--link-list a {
+  font-size: 13px;
+}
