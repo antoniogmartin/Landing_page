@@ -23,6 +23,22 @@ header.masthead {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
+.js_enabled #cookie-message {
+    display: none;
+}
+
+
+@font-face {
+  font-family: MyNokia;
+  src: local("Nokia Standard Multiscript"),
+  local("Nokia Standard Multiscript"),
+  url(Nokia Standard Multiscript.otf);
+ 
+}
+.nokiafont{
+  font-family: MyNokia;
+}
+
 
 header.masthead .overlay {
   position: absolute;

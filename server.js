@@ -38,7 +38,7 @@ app.get('/',function(req,res){
 
 
 
-routes(app,passport);
+//routes(app,passport);
 
 //Iniciar el server
 const PORT = process.env.PORT || 8080;

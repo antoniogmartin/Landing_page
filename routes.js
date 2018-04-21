@@ -14,9 +14,9 @@ module.exports = function(app) {
     // =====================================
     // Index ========
     // =====================================
-    app.get('/',function(req, res) {
+    app.get('/blog',function(req, res) {
 
-            res.render('/api/table', {user : req.user });
+            res.render('/blog');
         
     });
 

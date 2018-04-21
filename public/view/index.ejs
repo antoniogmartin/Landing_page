@@ -16,8 +16,10 @@
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
 
     <!-- Custom styles for this template -->
+    <link href="../css/landing-page.css" rel="stylesheet">
     <link href="../css/landing-page.css" rel="stylesheet">
 
   </head>
@@ -27,7 +29,12 @@
     <!-- Navigation -->
     <nav class="navbar"  style="background-color: #f8f9fc">
       
+<<<<<<< HEAD
+      <h2><img src="/img/time2.png" style="display: inline-block; width: 15%;">Metrepp</h2>
+=======
       <h2><img src="/img/time2.png" style="display: inline-block; width: 20%;">Metrepp</h2>
+      <a href="../../simple-blog-master/views/index.html">Blog</a>
+>>>>>>> cdfec8c30997da1f1c50a6755a02ca06f1714ba7
      
   </nav>
     <!-- <nav class="navbar navbar-light bg-light static-top">
@@ -181,7 +188,27 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#edeff5",
+      "text": "#838391"
+    },
+    "button": {
+      "background": "#4b81e8"
+    }
+  },
+  "position": "bottom-right",
+  "content": {
+    "message": "Metrepp usa cookies para asegurarte la mejor experiencia en nuestra web",
+    "dismiss": "Lo entiendo",
+    "link": "Saber más"
+  }
+})});
+</script>
   </body>
 
 </html>
