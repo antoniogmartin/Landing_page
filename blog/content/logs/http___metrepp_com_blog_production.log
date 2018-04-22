@@ -1,0 +1,12 @@
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":40,"msg":"Theme's file locales/en.json not found. ","time":"2018-04-22T10:29:50.032Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":40,"msg":"Theme's file locales/en.json not found. ","time":"2018-04-22T10:29:50.033Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ghost is running in production... ","time":"2018-04-22T10:29:50.576Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ghost is running in production... ","time":"2018-04-22T10:29:50.576Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Your blog is now available on http://metrepp.com/blog/ ","time":"2018-04-22T10:29:50.578Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ctrl+C to shut down ","time":"2018-04-22T10:29:50.580Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Your blog is now available on http://metrepp.com/blog/ ","time":"2018-04-22T10:29:50.578Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ctrl+C to shut down ","time":"2018-04-22T10:29:50.580Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ghost boot 4.759s ","time":"2018-04-22T10:29:50.582Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":30,"msg":"Ghost boot 4.759s ","time":"2018-04-22T10:29:50.582Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":40,"msg":"Ghost has shut down ","time":"2018-04-22T10:51:51.964Z","v":0}
+{"name":"Log","hostname":"ubuntuvm","pid":11677,"level":40,"msg":"Ghost has shut down ","time":"2018-04-22T10:51:51.965Z","v":0}
