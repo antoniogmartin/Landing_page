@@ -1,49 +1,60 @@
-var express  = require('express'),
-    path     = require('path'),
+var ghost = require('ghost'),  
+    express = require('express'),
+    hbs  = require('express-hbs'),
     bodyParser = require('body-parser'),
     expressValidator = require('express-validator'),
     methodOverride = require('method-override'),
-    passport = require('passport'),
-    flash    = require('connect-flash'),
-    routes=require('./routes.js');
+    path = require('path'),
+    parentApp = express();
     
-var app = express();
-/*Establecer  EJS template Engine*/
-app.set('views','./public/view');
-app.set('view engine','ejs');
+    parentApp.set('views','./public/view');
+    parentApp.set('view engine','ejs');
+    parentApp.use(express.static(path.join(__dirname, 'public')));
+    parentApp.use(bodyParser.urlencoded({ extended: true })); 
+    parentApp.use(bodyParser.json());
+    parentApp.use(methodOverride('_method'));
+    parentApp.use(expressValidator());
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true })); 
-app.use(bodyParser.json());
-app.use(methodOverride('_method'));
-app.use(expressValidator());
 
-var connection  = require('express-myconnection'),
-    mysql = require('mysql');
+function processBuffer( buffer, app ){  
+  while( buffer.length ){
+    var request = buffer.pop();
+    app( request[0], request[1] );
+  }
+}
 
-app.use(
+function makeGhostMiddleware(cb, options) {  
+  var requestBuffer = [];
+  var app = false;
 
-    connection(mysql,{
-        database: process.env.SQL_DATABASE,
-        user     : process.env.SQL_USER,
-        password : process.env.SQL_PASSWORD,
-        debug    : false,
-        multipleStatements: true
-    },'request')
-); 
+  ghost( options ).then( function( ghost ){
+    app = ghost.rootApp;
+    processBuffer( requestBuffer, app );
+    cb();
+  });
 
-app.get('/',function(req,res){
-    res.render('index');
+  return function handleRequest(req, res){
+    if(!app) {
+      requestBuffer.unshift( [req, res] );
+    } else {
+      app( req, res );
+    }
+  };
+}
+
+parentApp.set('port', (process.env.PORT || 2368));
+
+parentApp.engine('hbs', hbs.express4({}));  
+parentApp.set('view engine', 'hbs');  
+parentApp.set('views', path.join(process.cwd(), 'views'));  
+parentApp.use(express.static(path.join(process.cwd(), 'public')));
+
+parentApp.get('/', function (req, res) {  
+  res.render('index');
 });
 
-
-
-//routes(app,passport);
-
-//Iniciar el server
-const PORT = process.env.PORT || 8080;
-var server = app.listen(PORT,function(){
-
-   console.log("Listening to port %s",server.address().port);
-
-});
+parentApp.use( '/blog', makeGhostMiddleware(function(ghostServer) {  
+  require('./helpers')();
+}, {
+  config: path.join(process.cwd(), 'config.js')
+}));
